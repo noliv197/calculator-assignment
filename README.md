@@ -2,13 +2,17 @@
 
 ## Table of contents
 - [Instructions](#instructions)
-- [Page]#(page)
+- [Page](#page)
 - [Logic](#logic)
 - [Group](#group)
 
 ## Instructions 
 
 ## Page
+Page [here](https://noliv197.github.io/calculator-assignment/)
+
+
+Template [here](https://www.figma.com/file/T5KZSY5YIKF6kF4EntvJUJ/Calculator?node-id=0%3A1&t=LAqi7BVDtnPAhA6h-1)
 
 ## Logic
 
