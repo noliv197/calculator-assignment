@@ -38,7 +38,7 @@ Check the calculator [here](https://noliv197.github.io/calculator-assignment/)
 
 ### Template 
 
-<img src="https://i.imgur.com/YZ79DVe.png" alt="template">
+<img src="https://i.imgur.com/YO5nrFF.png" alt="template">
 
 ## Logic
 
