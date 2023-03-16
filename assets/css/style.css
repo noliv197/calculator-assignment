@@ -1,2 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url("./reset.css");
+
+:root{
+    --backgroundPrimary: #227C9D;
+    --backgroundSecondary: #FFCF57;
+    --backgroundLight: #F4F3EE;
+    --backgroundDark: #FF7757;
+    --textPrimary: #000000;
+    --textSecondary: #F4F3EE;
+    --fontFamily: 'Roboto';
+    --weight: 700;
+}
+
+body{
+    min-height: 100vh;
+}
