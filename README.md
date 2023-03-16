@@ -35,8 +35,11 @@ __Important__
 
 ## Page
 Check the calculator [here](https://noliv197.github.io/calculator-assignment/)
-###Template 
+
+### Template 
+
 <img src="https://i.imgur.com/YZ79DVe.png" alt="template">
+
 ## Logic
 
 ## Group
