@@ -4,46 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-
+    <title>Calculator App</title>
+    <link rel="icon" href="./assets/calculator-solid.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/app/app.js" type="module" defer></script>
 </head>
 <body>
     <main>
         <section>
-            <output data-result value="0">0</output>
-        </section>
-        <section>
-            <button data-operator="clear">C</button>
-            <button data-operator="erase">DEL</button>
-            <button data-key="x" data-operator="multiply">x</button>
-            
-            <button data-key="7">7</button>
-            <button data-key="8">8</button>
-            <button data-key="9">9</button>
-            <button data-key="-" data-operator="subtract">-</button>
-            
-            <button data-key="4">4</button>
-            <button data-key="5">5</button>
-            <button data-key="6">6</button>
-            <button data-key="+" data-operator="sum">+</button>
-            
-            <button data-key="1">1</button>
-            <button data-key="2">2</button>
-            <button data-key="3">3</button>
-            <button data-key="÷" data-operator="divide">÷</button>
-            
-            <button data-key="0">0</button>
-            <button data-key="." data-operator="float">.</button>
-            <button data-operator="calculate">=</button>
-            
+            <output data-result >0</output>
+            <div>
+                <button type="button" data-operator="clear">C</button>
+                <button type="button" data-operator="erase">DEL</button>
+                <button type="button" data-key="x" data-operator="multiply">x</button>
+                <button type="button" data-key="7">7</button>
+                <button type="button" data-key="8">8</button>
+                <button type="button" data-key="9">9</button>
+                <button type="button" data-key="-" data-operator="subtract">-</button>
+                <button type="button" data-key="4">4</button>
+                <button type="button" data-key="5">5</button>
+                <button type="button" data-key="6">6</button>
+                <button type="button" data-key="+" data-operator="sum">+</button>
+                <button type="button" data-key="1">1</button>
+                <button type="button" data-key="2">2</button>
+                <button type="button" data-key="3">3</button>
+                <button type="button" data-key="÷" data-operator="divide">÷</button>
+                <button type="button" data-key="0">0</button>
+                <button type="button" data-key="." data-operator="float">.</button>
+                <button type="button" data-operator="calculate">=</button>
+            </div>
         </section>
     </main>
     <footer>
-        Coded by: <br>
-        David Ghizzi, Natalia Oliveira, Sharon Ettinger <br>
-        2023
+        <span>Coded by:</span>
+        <span>David Ghizzi, Natalia Oliveira, Sharon Ettinger</span>
+        <span>2023</span>
     </footer>
     
 </body>
