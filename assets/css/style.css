@@ -6,6 +6,10 @@
     --backgroundSecondary: #FFCF57;
     --backgroundLight: #F4F3EE;
     --backgroundDark: #FF7757;
+    --shadowSecondary: #d9b353;
+    --shadowDark: #d76c52;
+    --shadowLight: #dddaca;
+
     --textPrimary: #000000;
     --textSecondary: #F4F3EE;
     --fontFamily: 'Roboto';
@@ -13,5 +17,6 @@
 }
 
 body{
+    font-family: var(--fontFamily);
     min-height: 100vh;
 }
