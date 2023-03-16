@@ -1,5 +1,5 @@
 /*Operation Logic*/
-class Operation{
+export default class Operation{
     sum(num1,num2){
         return parseFloat(num1) + parseFloat(num2)
     }
