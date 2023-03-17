@@ -11,12 +11,13 @@
 </head>
 <body>
     <main>
-        <section>
-            <output data-result>0</output>
-            <div>
-                <button type="button" data-operator="clear">C</button>
-                <button type="button" data-operator="erase">DEL</button>
-                <button  
+        <section id="box">
+            <output id="display" data-result>0</output>
+            <div id="keys">
+                <button class="red long" type="button" data-operator="clear">C</button>
+                <button class="red" type="button" data-operator="erase">DEL</button>
+                <button 
+                    class="orange" 
                     type="button" 
                     data-operator="*"
                 >x</button>
@@ -24,6 +25,7 @@
                 <button type="button" data-key="8">8</button>
                 <button type="button" data-key="9">9</button>
                 <button 
+                    class="orange"
                     type="button" 
                     data-operator="/"
                 >÷</button>
@@ -31,6 +33,7 @@
                 <button type="button" data-key="5">5</button>
                 <button type="button" data-key="6">6</button>
                 <button 
+                    class="orange"
                     type="button" 
                     data-operator="+"
                 >+</button>
@@ -38,12 +41,14 @@
                 <button type="button" data-key="2">2</button>
                 <button type="button" data-key="3">3</button>
                 <button 
+                    class="orange"
                     type="button" 
                     data-operator="-"
                 >-</button>
-                <button type="button" data-key="0">0</button>
+                <button class="long" type="button" data-key="0">0</button>
                 <button type="button" data-key="." data-operator="float">.</button>
                 <button 
+                    class="orange"
                     type="button" 
                     data-operator="="
                 >=</button>
