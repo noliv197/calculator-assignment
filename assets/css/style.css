@@ -19,19 +19,25 @@
 body{
     font-family: var(--fontFamily);
     background-color: var(--backgroundLight);
-    min-height: 100vh;
+    min-height: 100vh; 
 }
+
 main{
-    min-height: calc(100vh - 73px);
+    min-height: calc(100vh - 73px); 
+    width: 400px;
+    margin: 0 auto;
 }
+
 #box {
     border: groove #76a6b8;
     background-color: var(--backgroundPrimary);
     border-radius: 15px;
-    width: 400px;
+    max-width: 100%;
     box-sizing: border-box;
     padding: 20px;
+
 }
+
 #display {
     border: inset #ecebe8;
     border-radius: 8px;
@@ -46,18 +52,22 @@ main{
     width: 100%;
     box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
     height: 5px;
 }
+
 ::-webkit-scrollbar-track{
     background: #000;
     width: 2px;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #ecebe8;
     border-radius: 15px;
 }
+
 #keys {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -65,6 +75,7 @@ main{
     grid-column-gap: 15px;
     cursor: pointer;
 }
+
 button {
     cursor: pointer;
     height: 60px;
@@ -78,39 +89,71 @@ button {
     text-shadow: 0 1px #ffffff66; 
     font-weight: 700;
 }
+
 button:hover {
     background-color: #eaeaea;
 }
+
 button:active{
     filter: brightness(75%);
 }
+
 .red {
     background-color: var(--backgroundDark);
     border-color: #b0353a;
 }
+
 .orange {
     background-color: #FFAF64;
     font-size: 32px;
     grid-column-start: 4;
 }
+
 .red:hover {
     background-color: #f17377;
 }
+
 .orange:hover {
     background-color: #f8b77a;
 }
+
 .long {
     grid-column: span 2;
 }
+
 footer {
     color: var(--textSecondary);
     text-align: center;
     background-color: var(--backgroundPrimary);
     line-height: 30px;
-    padding: 20px 0;
+    padding: 20px 0; 
 }
+
 span {
     font-size: 25px;
     font-weight: var(--weight);
     padding-bottom: 5px;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    footer span {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #box {
+        width: 70%;  
+        margin: 15px; 
+    }
+    #display {
+        font-size: 2.7rem;
+    }
+    button {
+        font-size: 18px;
+    }
+    .orange {
+        font-size: 20px;
+    }
 }
