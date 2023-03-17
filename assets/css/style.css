@@ -1,109 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url("./reset.css");
 
-body {
-    background-color: #f7f6f2;
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+:root{
+    --backgroundPrimary: #227C9D;
+    --backgroundSecondary: #FFCF57;
+    --backgroundLight: #F4F3EE;
+    --backgroundDark: #FF7757;
+    --shadowSecondary: #d9b353;
+    --shadowDark: #d76c52;
+    --shadowLight: #dddaca;
+
+    --textPrimary: #000000;
+    --textSecondary: #F4F3EE;
+    --fontFamily: 'Roboto';
+    --weight: 700;
 }
 
-#box {
-    border: groove #76a6b8;
-    background-color: #227C9D;
-    border-radius: 15px;
-    width: 400px;
-}
-
-#display {
-    border: inset #ecebe8;
-    border-radius: 15px;
-    font-size: 3.5rem;
-    height: 80px;
-    background-color: #252525;
-    color: #f7f7f7;
-    text-align: right;
-    margin: 20px;
-    padding-top: 15px;
-    padding-right: 20px;
-}
-
-#keys {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 20px;
-    grid-row-gap: 15px;
-    grid-column-gap: 15px;
-    cursor: pointer;
-}
-
-button {
-    cursor: pointer;
-    height: 60px;
-    background-color: #f7f7f7;
-    border-radius: 13px;
-    border: 1px solid #c4c4c4;
-    font-size: 24px;
-    color: #333;
-    background-image: linear-gradient(to bottom,transparent,transparent 50%,#0000000a);
-    box-shadow: inset 0 0 0 1px #ffffff0d, inset 0 1px 0 0 #ffffff73, inset 0 -1px 0 0 #ffffff26, 0 1px 0 0 #ffffff26;
-    text-shadow: 0 1px #ffffff66; 
-}
-
-button:hover {
-    background-color: #eaeaea;
-}
-
-.operator {
-    color: #227C9D;
-    font-size: 32px;
-    grid-column-start: 4;
-  }
-
-.red {
-    background-color: #f0595f;
-    border-color: #b0353a;
-    color: #fff;
-  }
-  
-.red:hover {
-    background-color: #f17377;
-  }
-
-[data-operator="clear"] {
-    width: 220%;
-}
-
-[data-operator="erase"] {
-    grid-column-start: 3;
-}
-
-.orange {
-    background-color: #FFAF64;
-    border-color: #bf7a39;
-    color: #fff;
-    width: 220%;
-    font-size: 32px;
-  }
-  
-.orange:hover {
-    background-color: #f8b77a;
-  }
-
-footer {
-    color: #F4F3EE;
-    font-size: 20px;
-    text-align: center;
-    background-color: #227C9D;
-    line-height: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 60px; 
-}
-
-p {
-    font-size: 25px;
-    font-weight: bold;
-    padding-bottom: 5px;
+body{
+    font-family: var(--fontFamily);
+    min-height: 100vh;
 }

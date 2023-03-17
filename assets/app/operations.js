@@ -1,5 +1,5 @@
 /*Operation Logic*/
-class Operation{
+export default class Operation{
     sum(num1,num2){
         return parseFloat(num1) + parseFloat(num2)
     }
@@ -16,8 +16,8 @@ class Operation{
         switch (operator) {
             case '+': return  this.sum(num1, num2)
             case '-': return  this.subtract(num1, num2)
-            case '÷': return  this.divide(num1, num2)
-            case 'x': return  this.multiply(num1, num2)
+            case '/': return  this.divide(num1, num2)
+            case '*': return  this.multiply(num1, num2)
             case null: return NaN
             default: return  0
         }
