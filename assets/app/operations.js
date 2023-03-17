@@ -1,23 +1,31 @@
 /*Operation Logic*/
 export default class Operation{
-    sum(num1,num2){
-        return parseFloat(num1) + parseFloat(num2)
+    sum(firstNumber,secondNumber){
+        let result = parseFloat(firstNumber) + parseFloat(secondNumber)
+        return this.checkFloat(result)
     }
-    subtract(num1,num2){
-        return parseFloat(num1) - parseFloat(num2)
+    subtract(firstNumber,secondNumber){
+        let result = parseFloat(firstNumber) - parseFloat(secondNumber)
+        return this.checkFloat(result)
     }
-    multiply(num1,num2){
-        return parseFloat(num1) * parseFloat(num2)
+    multiply(firstNumber,secondNumber){
+        let result = parseFloat(firstNumber) * parseFloat(secondNumber)
+        return this.checkFloat(result)
     }
-    divide(num1,num2){
-        return num2 == 0 ? NaN : parseFloat(num1) / parseFloat(num2)
+    divide(firstNumber,secondNumber){
+        return secondNumber == 0 ? 'not so fast' : this.checkFloat(parseFloat(firstNumber) / parseFloat(secondNumber))
+    
     }
-    operate(num1,num2,operator){
+    checkFloat(number){
+        return (number.toFixed(2) != `${number}.00` ? number.toFixed(2) : number)
+    }
+    result(firstNumber,secondNumber,operator){
+        console.log(`${firstNumber} ${operator} ${secondNumber}`)
         switch (operator) {
-            case '+': return  this.sum(num1, num2)
-            case '-': return  this.subtract(num1, num2)
-            case '/': return  this.divide(num1, num2)
-            case '*': return  this.multiply(num1, num2)
+            case '+': return  this.sum(firstNumber, secondNumber)
+            case '-': return  this.subtract(firstNumber, secondNumber)
+            case '/': return  this.divide(firstNumber, secondNumber)
+            case '*': return  this.multiply(firstNumber, secondNumber)
             case null: return NaN
             default: return  0
         }

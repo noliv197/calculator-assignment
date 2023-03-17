@@ -22,13 +22,15 @@ body{
     min-height: 100vh;
 }
 main{
-    min-height: calc(100vh - 73px);
+    min-height: calc(100vh - 90px);
+    padding-top: 20px;
 }
 #box {
     border: groove #76a6b8;
     background-color: var(--backgroundPrimary);
     border-radius: 15px;
-    width: 400px;
+    max-width: 400px;
+    margin: 0 auto;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -60,9 +62,8 @@ main{
 }
 #keys {
     display: grid;
+    gap: 15px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 15px;
-    grid-column-gap: 15px;
     cursor: pointer;
 }
 button {
@@ -108,9 +109,29 @@ footer {
     background-color: var(--backgroundPrimary);
     line-height: 30px;
     padding: 20px 0;
-}
-span {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: var(--weight);
-    padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    footer span {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 460px){
+    #box {
+        width: 90%;  
+    }
+    #keys{
+        gap: 3px;
+    }
+    #display {
+        font-size: 2.7rem;
+    }
+    button {
+        font-size: 18px;
+    }
+    .orange {
+        font-size: 20px;
+    }
 }
