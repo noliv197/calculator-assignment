@@ -12,7 +12,7 @@ let calculator = {
 let keyCode = ""
 let lastAction = ""
 
-document.addEventListener("keypress", event =>{
+document.addEventListener("keydown", event =>{
     keyCode = event.key
     codeCheck(keyCode)
 })
@@ -124,12 +124,15 @@ function codeCheck(key){
             else if(!visorElement.value.includes(".")) displayOnVisor(".")
             break
         case 'clear':
+        case 'Escape':
             clearAll()
             break         
         case 'erase':
+        case 'Backspace':
             deleteChar()
             break
         case '=':
+        case 'Enter':
             if(
                 calculator.operator !== "" && 
                 lastAction !=='calculate' &&
