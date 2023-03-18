@@ -34,14 +34,21 @@ function displayOnVisor(value,action){
         value !== "."
     ) {
         visorElement.value = value
+
+    }else if (lastAction === 'calculate') {
+        visorElement.value = value
+        calculator.firstNumber = 0
+        calculator.secondNumber = 0
     }else {
         visorElement.value += value
     }
     lastAction = action
 }
+
 function displayResult(result){
     visorElement.value = result
 }
+
 function getResult(){
     calculator.secondNumber = visorElement.value
     calculator.result = operate.result(
@@ -51,6 +58,7 @@ function getResult(){
     )
     calculator.firstNumber = calculator.result
 }
+
 function clearAll(){
     visorElement.value = "0"
     lastAction = ''
@@ -59,6 +67,7 @@ function clearAll(){
     calculator.operator = '' 
     calculator.result =  ''
 }
+
 function deleteChar(){
     if (visorElement.value.length > 1) {
         visorElement.value = visorElement.value.slice(0, -1)
@@ -66,6 +75,7 @@ function deleteChar(){
         visorElement.value = "0"
     }
 }
+
 function codeCheck(key){
     switch (key){
         case '0':
@@ -110,7 +120,7 @@ function codeCheck(key){
             break
         case ',':
         case '.':
-            if (lastAction === 'operator') displayOnVisor("0.")
+            if (lastAction === 'operator' || lastAction === 'calculate') displayOnVisor("0.")
             else if(!visorElement.value.includes(".")) displayOnVisor(".")
             break
         case 'clear':
@@ -120,7 +130,6 @@ function codeCheck(key){
             deleteChar()
             break
         case '=':
-        case 'Enter':
             if(
                 calculator.operator !== "" && 
                 lastAction !=='calculate' &&

@@ -20,7 +20,6 @@ export default class Operation{
         return (number.toFixed(2) != `${number}.00` ? number.toFixed(2) : number)
     }
     result(firstNumber,secondNumber,operator){
-        console.log(`${firstNumber} ${operator} ${secondNumber}`)
         switch (operator) {
             case '+': return  this.sum(firstNumber, secondNumber)
             case '-': return  this.subtract(firstNumber, secondNumber)

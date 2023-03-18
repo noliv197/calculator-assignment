@@ -21,10 +21,12 @@ body{
     background-color: var(--backgroundLight);
     min-height: 100vh;
 }
+
 main{
     min-height: calc(100vh - 90px);
     padding-top: 20px;
 }
+
 #box {
     border: groove #76a6b8;
     background-color: var(--backgroundPrimary);
@@ -34,6 +36,7 @@ main{
     box-sizing: border-box;
     padding: 20px;
 }
+
 #display {
     border: inset #ecebe8;
     border-radius: 8px;
@@ -48,24 +51,29 @@ main{
     width: 100%;
     box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
     height: 5px;
 }
+
 ::-webkit-scrollbar-track{
     background: #000;
     width: 2px;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #ecebe8;
     border-radius: 15px;
 }
+
 #keys {
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     cursor: pointer;
 }
+
 button {
     cursor: pointer;
     height: 60px;
@@ -79,30 +87,38 @@ button {
     text-shadow: 0 1px #ffffff66; 
     font-weight: 700;
 }
+
 button:hover {
     background-color: #eaeaea;
 }
+
 button:active{
     filter: brightness(75%);
 }
+
 .red {
     background-color: var(--backgroundDark);
     border-color: #b0353a;
 }
+
 .orange {
     background-color: #FFAF64;
     font-size: 32px;
     grid-column-start: 4;
 }
+
 .red:hover {
     background-color: #f17377;
 }
+
 .orange:hover {
     background-color: #f8b77a;
 }
+
 .long {
     grid-column: span 2;
 }
+
 footer {
     color: var(--textSecondary);
     text-align: center;
@@ -118,11 +134,13 @@ footer {
         font-size: 18px;
     }
 }
+
 @media only screen and (max-width: 552px) {
     main {
         min-height: calc(100vh - 120px);
     }
 }
+
 @media screen and (max-width: 460px){
     #box {
         width: 90%;  
