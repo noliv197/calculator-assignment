@@ -41,6 +41,34 @@ Check the calculator [here](https://noliv197.github.io/calculator-assignment/)
 <img src="https://i.imgur.com/YO5nrFF.png" alt="template">
 
 ## Logic
+* ``operations.js``
+    * class with all the operation logic;
+    * the ``result`` function receives two numbers and an operator, it checks which operation to call base on the operator and returns the operation value; 
+    * if the operation result is a float, the value returned is rounded to 2 decimals;
+* ``script.js``
+    * has all the DOM manipulation logic;
+    * declares the calculator object that has initial values 
+    * adds ``eventListener`` to all the buttons for clicks and keypress event;
+    * every time the event is triggered it gets the keycode by either ``event.key`` function or by the ``dataset attribute`` value;
+    * each code has a logic associated with
+        * ``numbers``: display the number on the screen;
+            * if the visor has 0 on the display, it erases the zero and display the number;
+        * ``+ - / *``: checks what was the last action called, if the first value or operator have not being assigned yet, then the current number displayed is set as ``firstNumber`` and the operator value is stored;
+            * if all the values for operation are setted, it calls the ``getResult()`` function;
+        * ``=``: calls ``getResult()`` function that:
+            * sets current number displayed to ``secondNumber`` variable, 
+            * calculates the operation result, 
+            * displayed the result on screen, 
+            * ``firstNumber`` value receives the result value. 
+            * If the operator, first or sencond value have not being defined, nothing happens;  
+        * ``erase``: calls ``deleteChar()`` function that erases the last char on the display; 
+            * If the value has only one algorithm it will display ``0``; 
+        * ``clear``: calls ``clearAll()`` function that set all the variables to their initial values;
+        * ``.``: display a dot on the display;
+            * if the current number is 0, it returns ``0.``;
+            * if the last action was a operator click, then ``0.`` is also displayed;
+
+
 
 ## Group
 |David Ghizzi|Natalia Oliveira|Sharon Ettinger|
