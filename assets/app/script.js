@@ -34,11 +34,6 @@ function displayOnVisor(value,action){
         value !== "."
     ) {
         visorElement.value = value
-
-    }else if (lastAction === 'calculate') {
-        visorElement.value = value
-        calculator.firstNumber = 0
-        calculator.secondNumber = 0
     }else {
         visorElement.value += value
     }
@@ -120,7 +115,7 @@ function codeCheck(key){
             break
         case ',':
         case '.':
-            if (lastAction === 'operator' || lastAction === 'calculate') displayOnVisor("0.")
+            if (lastAction === 'operator') displayOnVisor("0.")
             else if(!visorElement.value.includes(".")) displayOnVisor(".")
             break
         case 'clear':
