@@ -11,6 +11,7 @@ let calculator = {
 }
 let keyCode = ""
 let lastAction = ""
+let previousKey = ""
 
 document.addEventListener("keydown", event =>{
     keyCode = event.key
@@ -76,7 +77,44 @@ function deleteChar(){
     }
 }
 
-function codeCheck(key){
+function checkOperator(key) {
+    if(
+        calculator.firstNumber && 
+        calculator.operator && 
+        lastAction !== 'calculate' &&
+        lastAction !== 'operator'
+    ){
+        getResult()
+        displayResult(calculator.result)
+        calculator.operator = key
+    }else {
+        calculator.firstNumber = visorElement.value
+        calculator.operator = key
+    }
+    lastAction = 'operator'
+}
+
+function checkEqual() {
+    if(
+        calculator.operator !== "" && 
+        lastAction !=='calculate' &&
+        lastAction !=='operator'
+    ){
+        getResult()
+        displayResult(calculator.result)
+        lastAction = 'calculate'
+    }
+}
+
+function changeButtonStatus(key) {
+    if(previousKey != "") {
+        document.querySelector(`button[data-operator="${previousKey}"]`).classList.remove("active")
+    }
+    document.querySelector(`button[data-operator="${key}"]`).classList.add("active")
+    previousKey = key
+}
+
+function codeCheck(key){ 
     switch (key){
         case '0':
             if(
@@ -103,20 +141,8 @@ function codeCheck(key){
         case '-':
         case '*':
         case '/':
-            if(
-                calculator.firstNumber && 
-                calculator.operator && 
-                lastAction !== 'calculate' &&
-                lastAction !== 'operator'
-            ){
-                getResult()
-                displayResult(calculator.result)
-                calculator.operator = key
-            }else {
-                calculator.firstNumber = visorElement.value
-                calculator.operator = key
-            }
-            lastAction = 'operator'
+            checkOperator(key)
+            changeButtonStatus(key)
             break
         case ',':
         case '.':
@@ -126,22 +152,15 @@ function codeCheck(key){
         case 'clear':
         case 'Escape':
             clearAll()
-            break         
+            changeButtonStatus(key)
+            break
         case 'erase':
         case 'Backspace':
             deleteChar()
             break
         case '=':
-        case 'Enter':
-            if(
-                calculator.operator !== "" && 
-                lastAction !=='calculate' &&
-                lastAction !=='operator'
-            ){
-                getResult()
-                displayResult(calculator.result)
-                lastAction = 'calculate'
-            }
+            checkEqual()
+            changeButtonStatus(key)
             break
     }
 }

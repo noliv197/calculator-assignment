@@ -96,6 +96,10 @@ button:active{
     filter: brightness(75%);
 }
 
+.active {
+    filter: brightness(125%); 
+}
+
 .red {
     background-color: var(--backgroundDark);
     border-color: #b0353a;
